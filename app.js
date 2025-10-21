@@ -3,9 +3,9 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 
-const bookRoutes = require('/Users/Admin/Documents/Back_end_LmCrud/routes/books');
-const memberRoutes = require('/Users/Admin/Documents/Back_end_LmCrud/routes/member');
-const loanRoutes = require('/Users/Admin/Documents/Back_end_LmCrud/routes/loan');
+const booksRouter = require('./routes/books');
+const memberRoutes = require('./routes/member');
+const loanRoutes = require('./routes/loan');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
@@ -20,7 +20,7 @@ mongoose.connect(process.env.MONGO_URI)
   .catch(err => console.error('❌ MongoDB connection error:', err));
 
 // Routes
-app.use('/api/books', bookRoutes);
+app.use('/api/books', booksRouter);
 app.use('/api/members', memberRoutes);
 app.use('/api/loans', loanRoutes);
 
