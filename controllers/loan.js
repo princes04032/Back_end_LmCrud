@@ -1,4 +1,5 @@
-const Loan = require('/Users/Admin/Documents/Back_end_LmCrud/models/loan');
+const Loan = require('../models/loan');
+const booksRouter = require('../routes/books');
 
 const getAllLoans = async (req, res) => {
   try {
@@ -41,3 +42,8 @@ const deleteLoan = async (req, res) => {
 };
 
 module.exports = { getAllLoans, getLoanById, createLoan, deleteLoan };
+
+booksRouter.get('/loans', getAllLoans);
+booksRouter.get('/loans/:id', getLoanById);
+booksRouter.post('/loans', createLoan);
+booksRouter.delete('/loans/:id', deleteLoan);
