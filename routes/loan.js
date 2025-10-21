@@ -1,10 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const { getAllLoans, getLoanById, createLoan, deleteLoan } = require('/Users/Admin/Documents/Back_end_LmCrud/controllers/loan');
 
-router.get('/', getAllLoans);
-router.get('/:id', getLoanById);
-router.post('/', createLoan);
-router.delete('/:id', deleteLoan);
+// placeholder endpoints
+router.get('/', (req, res) => res.json({ message: 'Loans route placeholder' }));
+router.post('/', (req, res) => res.status(201).json({ message: 'Create loan not implemented yet' }));
 
 module.exports = router;

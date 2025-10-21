@@ -1,10 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const { getAllMembers, getMemberById, createMember, deleteMember } = require('/Users/Admin/Documents/Back_end_LmCrud/controllers/member');
 
-router.get('/', getAllMembers);
-router.get('/:id', getMemberById);
-router.post('/', createMember);
-router.delete('/:id', deleteMember);
+// placeholder endpoints
+router.get('/', (req, res) => res.json({ message: 'Members route placeholder' }));
+router.post('/', (req, res) => res.status(201).json({ message: 'Create member not implemented yet' }));
 
 module.exports = router;
