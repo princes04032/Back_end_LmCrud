@@ -1,11 +1,11 @@
 const express = require('express');
 const router = express.Router();
-const memberController = require('../controllers/member');
+const { getAllMembers, getMemberById, createMember, deleteMember } = require('../controllers/member');
 
-// Define routes
-router.get('/', memberController.getAllMembers);
-router.get('/:id', memberController.getMemberById);
-router.post('/', memberController.createMember);
-router.delete('/:id', memberController.deleteMember);
+// Define routes with proper handler functions
+router.get('/', getAllMembers);
+router.get('/:id', getMemberById);
+router.post('/', createMember);
+router.delete('/:id', deleteMember);
 
 module.exports = router;

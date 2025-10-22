@@ -1,12 +1,12 @@
 const express = require('express');
 const router = express.Router();
-const bookController = require('../controllers/book');
+const { getAllBooks, getBookById, createBook, updateBook, deleteBook } = require('../controllers/book');
 
-// Define routes
-router.get('/', bookController.getAllBooks);
-router.get('/:id', bookController.getBookById);
-router.post('/', bookController.createBook);
-router.put('/:id', bookController.updateBook);
-router.delete('/:id', bookController.deleteBook);
+// Define routes with proper handler functions
+router.get('/', getAllBooks);
+router.get('/:id', getBookById);
+router.post('/', createBook);
+router.put('/:id', updateBook);
+router.delete('/:id', deleteBook);
 
 module.exports = router;
