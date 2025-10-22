@@ -1,4 +1,4 @@
-const Member = require('../models/member');
+const Member = require('../models/member.js');
 
 const getAllMembers = async (req, res) => {
   try {

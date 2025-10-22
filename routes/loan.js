@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const { getAllLoans, getLoanById, createLoan, deleteLoan } = require('../controllers/loan');
+const { getAllLoans, getLoanById, createLoan, deleteLoan } = require('../controllers/loan.js');
 
 // Define routes with proper handler functions
 router.get('/', getAllLoans);
