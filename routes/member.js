@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const { getAllMembers, getMemberById, createMember, deleteMember} = require('../controllers/book.js');
+const { getAllMembers, getMemberById, createMember, deleteMember} = require('../controllers/member.js');
 
 // Define routes
 router.get('/', getAllMembers);
