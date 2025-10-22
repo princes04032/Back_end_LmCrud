@@ -3,9 +3,9 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 
-const booksRouter = require('./routes/books');
-const memberRoutes = require('./routes/member');
-const loanRoutes = require('./routes/loan');
+const booksRouter = require('./routes/books.js');
+const memberRoutes = require('./routes/member.js');
+const loanRoutes = require('./routes/loan.js');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
